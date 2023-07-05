@@ -44,6 +44,12 @@ const Formulario = () => {
 
     return (
         <form>
+            <ul>
+                {[1,2,3,4,5].map(item => (
+                    <li key={item}>{item}</li>
+                ))}
+            </ul>
+
             <input type="text" placeholder="Insira o seu nome" onChange={alteraNome} />
             <input type="number" placeholder="Nota matéria A" onChange={e => setMateriaA(e.target.value)} min={valorMinimo} max={valorMaximo} />
             <input type="number" placeholder="Nota matéria B" onChange={e => setMateriaB(e.target.value)} min={valorMinimo} max={valorMaximo}/>
