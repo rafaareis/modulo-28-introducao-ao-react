@@ -1,17 +1,25 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 const Formulario = () => {
-    let [materiaA, setMateriaA] = useState(0);
-    let [materiaB, setMateriaB] = useState(0);
-    let [materiaC, setMateriaC] = useState(0);
-    let [nome, setNome] = useState(0);
+    const [materiaA, setMateriaA] = useState(0);
+    const [materiaB, setMateriaB] = useState(0);
+    const [materiaC, setMateriaC] = useState(0);
+    const [nome, setNome] = useState(0);
 
     let valorMinimo = 0;
     let valorMaximo = 10;
 
+    useEffect(() => {
+        console.log("o estado nome mudou");
+    }, [nome]);
+
+    useEffect(() => {
+        console.log('materia A mudou para: '+ materiaA)
+    }, [materiaA]);
+
     const alteraNome = (evento) => {
         setNome(e => {
-            console.log(e);
+            // console.log(e);
             return evento.target.value;
             
         })
@@ -20,7 +28,7 @@ const Formulario = () => {
 
     const renderizaResultado = () => {
         const soma = Number(materiaA) + Number(materiaB) + Number(materiaC);
-        console.log(soma);
+        // console.log(soma);
         const media = soma / 3;
 
         if(media >= 7) {
