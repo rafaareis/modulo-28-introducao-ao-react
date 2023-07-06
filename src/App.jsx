@@ -4,6 +4,8 @@ import Perfil from './components/Perfil/Perfil';
 // import Formulario from './components/Formulario/Formulario';
 import ReposList from './components/ReposList/ReposList';
 
+import './global.css';
+
 
 function App() {
   const [formularioEstaVisivel, setFormularioEstaVisivel] = useState(true);
@@ -11,8 +13,8 @@ function App() {
   return (
     <>
       
-      <Perfil />
-      <ReposList />
+      <Perfil nomeUsuario="rafaareis" />
+      <ReposList nomeUsuario="rafaareis" />
 
       {/* {formularioEstaVisivel && (
         <Formulario />

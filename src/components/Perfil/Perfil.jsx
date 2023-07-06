@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 
-import './perfil.css'
+import styles from './perfil.module.css';
 
-const Perfil = () => {
+const Perfil = ({ nomeUsuario }) => {
     const [perfila, setPerfila] = useState({});
 
     useEffect(() => {
-        fetch('https://api.github.com/users/rafaareis')
+        fetch(`https://api.github.com/users/${nomeUsuario}`)
         .then(res => res.json())
         .then(resJson => {
             setPerfila(resJson);          
@@ -14,10 +14,10 @@ const Perfil = () => {
     }, [])
 
     return(
-        <div>
-            <img className="perfil-avatar" src={perfila.avatar_url} alt={`Foto de ${perfila.name}`} />
+        <header className={styles.header}>
+            <img className={styles.avatar} src={perfila.avatar_url} alt={`Foto de ${perfila.name}`} />
             <h1>{perfila.name}</h1>
-        </div>
+        </header>
     )
 }
 
