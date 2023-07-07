@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
-
-import styles from './perfil.module.css';
+import styles from './Perfil.module.css';
 
 const Perfil = ({ nomeUsuario }) => {
     const [perfila, setPerfila] = useState({});
