@@ -1,14 +1,12 @@
 import {useState} from 'react';
 
-import Perfil from './components/Perfil/Perfil';
-// import Formulario from './components/Formulario/Formulario';
+import Perfil from './components/Perfil/perfil';
 import ReposList from './components/ReposList/ReposList';
 
 import './global.css';
 
 
 function App() {
-  // const [formularioEstaVisivel, setFormularioEstaVisivel] = useState(true);
   const [nomeUsuario, setNomeUsuario] = useState('');
 
   return (
@@ -21,14 +19,6 @@ function App() {
           <ReposList nomeUsuario={nomeUsuario} />
         </>
       )}
-
-      {/* {formularioEstaVisivel && (
-        <Formulario />
-      )}
-      
-
-      <button onClick={() => setFormularioEstaVisivel(!formularioEstaVisivel)} type='button'>Toggle Form</button>
-      */}
     </>
   )
 }
