@@ -1,5 +1,5 @@
-import {useState} from 'react';
-import Perfil from './components/Perfil/perfil';
+import { useState } from 'react';
+import Perfil from './components/Perfil/Perfil';
 import ReposList from './components/ReposList/ReposList';
 
 import './global.css';
