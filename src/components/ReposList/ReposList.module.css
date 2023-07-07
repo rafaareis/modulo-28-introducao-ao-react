@@ -1,3 +1,8 @@
+:root {
+    --corPrimaria: #f9ca24;
+    --corSecundaria: #111;
+}
+
 .list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -18,8 +23,19 @@
 
 }
 
+.itemName b,
+.itemLanguage b {
+    margin-right: 6px;
+}
+
 .itemLink {
     display: block;
-    background-color: red;
+    background-color: var(--corPrimaria);
+    color: var(--corSecundaria);
+    text-align: center;
+    font-weight: bold;
+    margin-top: 8px;
+    padding: 8px;
+    text-decoration: none;
 
 }
